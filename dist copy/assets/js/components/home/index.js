@@ -1,1 +1,0 @@
-home = angular.module('home', []);
