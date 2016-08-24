@@ -1,4 +1,6 @@
-# andrewerrico.com
+# *__ Work in Progress __* &mdash; andrewerrico.com
+
+---
 
 Source code for my personal portfolio.
 
