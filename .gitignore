@@ -2,6 +2,7 @@
 .sass-cache/
 *.css.map
 
+archive/
 
 ### Node ###
 # Logs
