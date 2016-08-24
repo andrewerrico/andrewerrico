@@ -1,0 +1,23 @@
+h2 Contact
+
+p
+
+.form-container(ng-controller="contactFormController")
+  form.form(name="contactForm", novalidate, role="form")
+    .input
+      label First Name
+      input(type="text", name="name", ng-model="user.firstName", ng-required="true")
+    .input
+      label Last Name
+      input(type="text", name="name", ng-model="user.lastName", ng-required="true")
+    .input
+      label Subject
+      input(type="text", name="name", ng-model="user.subject", ng-required="true")
+    .input
+      label Email
+      input(type="email", name="email", ng-model="user.email", ng-required="true")
+    .input
+      label Message
+      textarea(name="message", ng-model="user.message", ng-required="true")
+
+    input.submit(type="submit", value="SEND")

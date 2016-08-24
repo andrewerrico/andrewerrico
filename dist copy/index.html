@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!-- define angular app -->
+<html ng-app="scotchApp">
+  <head>
+    <!-- SCROLLS -->
+    <!-- load bootstrap and fontawesome via CDN -->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+
+      <!-- SPELLS -->
+      <!-- load angular via CDN -->
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+      <!-- <script src="script.js"></script> -->
+      <style>
+        .menu-open {
+          background: pink;
+        }
+      </style>
+    </head>
+
+    <!-- define angular controller -->
+    <body id="test" ng-controller="mainController">
+
+    <!-- MAIN CONTENT AND INJECTED VIEWS -->
+    <div id="main">
+
+      <div id="someMenu" ng-click="$menu.toggle()">Some Menu</div>
+
+      <div ng-click="$menu.show()">Show Menu</div>
+      <div ng-click="$menu.hide()">Hide Menu</div>
+
+      <div id="nav-toggle">Menu</div>
+      <a href="#">home</a>
+      <a href="#about">about</a>
+      <a href="#contact">contact</a>
+
+      <div ng-view></div>
+
+        <!-- angular templating -->
+        <!-- this is where content will be injected -->
+    </div>
+    <script type="text/javascript">
+        var body, button;
+        body = document.getElementsByTagName('body')[0];
+        button = document.getElementById('nav-toggle');
+        links = document.getElementsByTagName('a');
+
+        button.onclick = function() {
+          if ( -1 !== body.className.indexOf( 'menu-open' ) ) {
+            body.className = body.className.replace(' menu-open', '');
+          } else {
+            body.className += ' menu-open';
+          }
+        };
+
+        links.onclick = function() {
+          if ( -1 !== body.className.indexOf( 'menu-open' ) ) {
+            body.className = body.className.replace(' menu-open', '');
+          } else {
+            body.className += ' menu-open';
+          }
+        };
+
+    </script>
+    <script src="app/app.js"></script>
+  </body>
+</html>

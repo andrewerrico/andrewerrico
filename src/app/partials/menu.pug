@@ -1,0 +1,51 @@
+.nav-toggle(ng-click="$menu.toggle();$event.stopPropagation();")
+  .nav-icon MENU
+
+.nav
+  #main-menu.main-menu
+    .main-menu-wrapper
+      .container
+        .row
+          .col-xs-10.col-sm-6.text-left
+            h2 Where would you like to go?
+            nav
+              ul.primary-nav
+                li
+                  a(ng-click="$menu.hide();$event.stopPropagation();" href="#/") Home
+                    span Take me home
+                li
+                  a(ng-click="$menu.hide();$event.stopPropagation();" href="#about") About
+                    span Learn more about me
+                li
+                  a(ng-click="$menu.hide();$event.stopPropagation();" href="#process") Process
+                    span See how I like to work
+                li
+                  a(ng-click="$menu.hide();$event.stopPropagation();" href="#work") Work
+                    span Look what I can do
+                li
+                  a(ng-click="$menu.hide();$event.stopPropagation();" href="#contact") Contact
+                    span We need to talk
+          .col-xs-2.col-sm-6.text-right
+            address
+              ul.contact-info
+                li
+                  a(href="http://www.twitter.com/andrewerrico", target="_blank")
+                    i.icon-twitter
+                li
+                  a(href="http://www.instagram.com/iamandrewerrico", target="_blank")
+                    i.icon-instagram
+                li
+                  a(href="http://www.github.com/andrewerrico", target="_blank")
+                    i.icon-github
+                li
+                  a(href="http://www.linkedin.com/in/andrewerrico", target="_blank")
+                    i.icon-linkedin
+                li
+                  a(href="mailto:hello@andrewerrico.com", target="_blank")
+                    i.icon-envelope
+
+
+    .available
+      p
+        i.icon-check.icon-lg
+        | I am currently available for work. Feel free to connect with me.

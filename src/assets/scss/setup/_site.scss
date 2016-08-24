@@ -1,0 +1,53 @@
+/* Setup the base page paddings, margins, etc. */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  color: #f1f1f1;
+  font-family: $font-face;
+}
+
+main {
+  background: #333333;
+  position: relative;
+  z-index: 2;
+  //padding: 30px 30px 15px;
+  height: 100vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+
+  @extend %ha-webkit;
+
+  transition: transform 750ms;
+  transition-timing-function: cubic-bezier(0.91, 0.01, 0.6, 0.99);
+
+  .nav-open & {
+    transform: translateX(100%);
+  }
+
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $site-padding*2;
+  padding-right: $site-padding*2;
+
+  @extend %clearfix;
+
+  @media (min-width: 768px) {
+    width: 720px;
+  }
+  @media (min-width: 990px) {
+    width: 900px;
+  }
+}

@@ -1,0 +1,28 @@
+
+<h2>Contact</h2>
+<p></p>
+<div class="form-container" ng-controller="contactFormController">
+  <form class="form" name="contactForm" novalidate="novalidate" role="form">
+    <div class="input">
+      <label>First Name</label>
+      <input type="text" name="name" ng-model="user.firstName" ng-required="true"/>
+    </div>
+    <div class="input">
+      <label>Last Name</label>
+      <input type="text" name="name" ng-model="user.lastName" ng-required="true"/>
+    </div>
+    <div class="input">
+      <label>Subject</label>
+      <input type="text" name="name" ng-model="user.subject" ng-required="true"/>
+    </div>
+    <div class="input">
+      <label>Email</label>
+      <input type="email" name="email" ng-model="user.email" ng-required="true"/>
+    </div>
+    <div class="input">
+      <label>Message</label>
+      <textarea name="message" ng-model="user.message" ng-required="true"></textarea>
+    </div>
+    <input class="submit" type="submit" value="SEND"/>
+  </form>
+</div>

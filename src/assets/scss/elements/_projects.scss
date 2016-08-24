@@ -1,0 +1,143 @@
+.project {
+  position: relative;
+  margin-bottom: 30px;
+  overflow: hidden;
+
+  .project-description-container {
+    background: rgba(0, 0, 0, 0.65);
+    opacity: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .project-description {
+    top: 50%;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    padding: 15px;
+
+    h3 {
+      margin-top: 0.5em;
+    }
+
+    hr {
+      width: 60px;
+      left: 0;
+      margin-left: 0;
+    }
+    .tags {
+      display: none;
+      position: absolute;
+      bottom: 15px;
+      width: 100%;
+      @media (min-width: 552px) {
+        display: block;
+      }
+    }
+    .tag {
+      border-radius: 10px;
+      @include font-size(.7);
+      padding: 5px 15px;
+      background: rgba(0, 0, 0, 0.3);
+      display: inline-block;
+      &:not(:last-child) {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .project-description-container, .project-description, img {
+    transition: 300ms all ease-in-out;
+  }
+  .no-touchevents &:hover {
+
+    .project-description-container {
+      opacity: 1;
+    }
+    .project-description {
+      top: 0;
+    }
+
+    img {
+      transform: scale(1.2);
+    }
+  }
+}
+
+/*
+
+
+.projects {
+  position: relative;
+
+  .project {
+    //position: absolute;
+    display: none;
+    top: 0;
+    transition: 300ms all ease-in-out;
+
+    &.is-active {
+      display: block;
+    }
+    .project-header {
+      margin-bottom: $site-padding;
+      h3 {
+        margin-bottom: 0;
+        margin: 0;
+      }
+      @media (min-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+    p {
+      @include font-size(0.85);
+      color: #ccc;
+    }
+
+    .tags {
+      font-size: 0.75em;
+      .tag {
+        border-radius: 10px;
+        background: rgba(0, 0, 0, 0.2);
+        margin-right: 5px;
+        display: inline-block;
+        padding: 5px 15px;
+        @media (min-width: 768px) {
+          margin-left: 5px;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  .project-control {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #333;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, .4);
+    position: absolute;
+    top: 50%;
+    text-align: center;
+
+    &.next {
+      right: -90px;
+    }
+    &.previous {
+      left: -90px;
+    }
+
+    span {
+      @include font-size(2);
+    }
+  }
+}
+
+
+*/

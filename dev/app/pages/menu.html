@@ -1,0 +1,40 @@
+
+<div class="nav-toggle" ng-click="$menu.toggle();$event.stopPropagation();">
+  <div class="nav-icon"></div>
+</div>
+<div class="nav">
+  <div class="main-menu" id="main-menu">
+    <div class="main-menu-wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-10 col-sm-6 text-left">
+            <h2>Where would you like to go?</h2>
+            <nav>
+              <ul class="primary-nav">
+                <li><a ng-click="$menu.hide();$event.stopPropagation();" href="#/">Home<span>Take me home</span></a></li>
+                <li><a ng-click="$menu.hide();$event.stopPropagation();" href="#about">About<span>Learn more about me</span></a></li>
+                <li><a href="#">Process<span>See how I like to work</span></a></li>
+                <li><a href="#">Work<span>Look what I can do</span></a></li>
+                <li><a ng-click="$menu.hide();$event.stopPropagation();" href="#contact">Contact<span>We need to talk</span></a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-xs-2 col-sm-6 text-right">
+            <address>
+              <ul class="contact-info">
+                <li><a href="#"><i class="icon-twitter"></i></a></li>
+                <li><a href="#"><i class="icon-instagram"></i></a></li>
+                <li><a href="#"><i class="icon-github"></i></a></li>
+                <li><a href="#"><i class="icon-linkedin"></i></a></li>
+                <li><a href="#"><i class="icon-envelope"></i></a></li>
+              </ul>
+            </address>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="available">
+      <p><i class="icon-check icon-lg"></i>I am currently available for work. Feel free to connect with me.</p>
+    </div>
+  </div>
+</div>
