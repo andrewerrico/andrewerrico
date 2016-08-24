@@ -158,7 +158,3 @@ myApp.run(['$rootScope', function($rootScope) {
 ...
 
 */
-
-
-
-
