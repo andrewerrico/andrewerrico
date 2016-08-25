@@ -1,23 +1,44 @@
-h2 Contact
+.container
 
-p
+  .page-header
+    h2.header Contact
+    p.subheader Say HI!
+    hr
 
-.form-container(ng-controller="contactFormController")
-  form.form(name="contactForm", novalidate, role="form")
-    .input
-      label First Name
-      input(type="text", name="name", ng-model="user.firstName", ng-required="true")
-    .input
-      label Last Name
-      input(type="text", name="name", ng-model="user.lastName", ng-required="true")
-    .input
-      label Subject
-      input(type="text", name="name", ng-model="user.subject", ng-required="true")
-    .input
-      label Email
-      input(type="email", name="email", ng-model="user.email", ng-required="true")
-    .input
-      label Message
-      textarea(name="message", ng-model="user.message", ng-required="true")
+  .row
+    .col-xs-12.col-sm-6
+      .form-container(ng-controller="contactFormController")
+        form.form(name="contactForm", novalidate, role="form")
+          .input
+            label First Name
+            input(type="text", name="name", ng-model="user.firstName", ng-required="true")
+          .input
+            label Last Name
+            input(type="text", name="name", ng-model="user.lastName", ng-required="true")
+          .input
+            label Subject
+            input(type="text", name="name", ng-model="user.subject", ng-required="true")
+          .input
+            label Email
+            input(type="email", name="email", ng-model="user.email", ng-required="true")
+          .input
+            label Message
+            textarea(name="message", ng-model="user.message", ng-required="true")
 
-    input.submit(type="submit", value="SEND")
+          input.submit(type="submit", value="SEND")
+    .col-xs-12.col-sm-6
+
+      p
+        i.icon-github.icon-2x
+        span &nbsp;andrewerrico
+      p
+        i.icon-twitter.icon-2x
+        span &nbsp;andrewerrico
+      p
+        i.icon-linkedin.icon-2x
+        span &nbsp;andrewerrico
+      p
+        i.icon-envelope.icon-2x
+        span &nbsp;hello@andrewerrico.com
+
+      p Feel free to contact me about any freelance work.
