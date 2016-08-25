@@ -33,7 +33,6 @@ main {
   .nav-open & {
     transform: translateX(100%);
   }
-
 }
 
 .container {
@@ -45,9 +44,30 @@ main {
   @extend %clearfix;
 
   @media (min-width: 768px) {
-    width: 720px;
+    width: 600px;
   }
   @media (min-width: 990px) {
-    width: 900px;
+    width: 720px;
+  }
+}
+
+.page-header {
+
+  .header {
+    margin-bottom: 0;
+  }
+
+  .subheader {
+    color: #9f9f9f;
+    @include font-size(0.85);
+    margin-top: 0;
+    text-transform: uppercase;
+  }
+
+  hr {
+    margin-left: 0;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    width: 60px;
   }
 }
