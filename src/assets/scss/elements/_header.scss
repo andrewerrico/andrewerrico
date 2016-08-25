@@ -1,7 +1,5 @@
 header.site-header {
-  h2 {
-    @extend %hide-text;
-  }
+
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -12,13 +10,32 @@ header.site-header {
   margin-right: 90px;
   padding-left: $site-padding*2;
   padding-right: $site-padding*2;
+
+
+
   h1 {
     margin: 0;
   }
+
+  h2 {
+    @extend %hide-text;
+  }
+
   a {
-    color: #ffffff;
+    color: #aaa;
     &:not(:first-child) {
       margin-left: 15px;
+    }
+    i {
+      margin-left: 10px;
+    }
+  }
+
+  .social-links {
+    display: none;
+
+    @media (min-width: 552px) {
+      display: inline-block;
     }
   }
 }

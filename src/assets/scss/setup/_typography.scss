@@ -1,6 +1,16 @@
 /* Setup all typography */
+::selection {
+  color: #333333;
+  background: #ffff79;
+}
 
-
+p {
+  color: #bebebe;
+  & > a {
+    color: #fff;
+    font-weight: 700;
+  }
+}
 
 a {
   text-decoration: none;

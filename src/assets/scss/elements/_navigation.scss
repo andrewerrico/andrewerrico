@@ -120,7 +120,7 @@
     @extend %ha-webkit;
 
     h2 {
-      color: #ffff71;
+      color: #ffff79;
       font-weight: 700;
       margin-bottom: 3em;
       position: relative;
@@ -173,7 +173,7 @@
         color: #ffffff;
         transition: all 300ms ease-in-out;
         .no-touchevents &:hover {
-          color: #ffff71;
+          color: #ffff79;
         }
       }
     }
@@ -213,7 +213,7 @@
   a {
     transition: all 300ms ease-in-out;
     .no-touchevents &:hover {
-      color: #ffff71;
+      color: #ffff79;
     }
   }
 }
