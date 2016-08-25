@@ -20,21 +20,18 @@ html(lang="en", ng-app="myApp")
         h1
           a(ng-click="$event.stopPropagation();" href="#") AE
         .secondary-navigation
-          nav
-            .social-links
-              a(href="#")
-                i.fa.fa-twitter
-              a(href="#")
-                i.fa.fa-instagram
-              a(href="#")
-                i.fa.fa-facebook
-              a(ng-click="$menu.hide();$event.stopPropagation();" href="#work") Work
-              a(ng-click="$menu.hide();$event.stopPropagation();" href="#contact") Contact
 
-      article.container
-        //-ng-view
+          .social-links
+            a(href="http://twitter.com/andrewerrico", target="_blank")
+              i.icon-twitter.icon-lg
+            a(href="http://instagram.com/iamandrewerrico", target="_blank")
+              i.icon-instagram.icon-lg
+            a(href="http://github.com/andrewerrico", target="_blank")
+              i.icon-github.icon-lg
+          a(ng-click="$menu.hide();$event.stopPropagation();" href="#work") Work
+          a(ng-click="$menu.hide();$event.stopPropagation();" href="#contact") Contact
 
-        #view(ng-view, class="{{pageClass}} fade")
+      article#view(ng-view, class="{{pageClass}} fade")
 
     div(ng-include="'/app/partials/menu.html'")
 
