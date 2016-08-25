@@ -11,7 +11,11 @@ myApp.controller('mainController', function($scope) {
 });
 
 myApp.controller('aboutController', function($scope) {
+    var currentTime = new Date();
+    var dob = 1988;
+
     $scope.message = 'Look! I am an about page.';
+    $scope.age = currentTime.getFullYear() - dob;
     $scope.pageClass = 'page-about';
 });
 
@@ -50,7 +54,7 @@ myApp.controller('contactFormController', function($scope){
     email: 'aserrico@gmail.com',
     message: ''
   };
-  
+
 });
 
 myApp.run(['$rootScope', '$menu', function($rootScope, $menu) {

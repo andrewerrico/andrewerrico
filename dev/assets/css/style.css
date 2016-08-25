@@ -10,12 +10,12 @@ main, .nav-toggle .nav-icon:before, .nav-toggle .nav-icon:after, .nav .main-menu
           backface-visibility: hidden;
 }
 
-.container:before, .container:after {
+.container:before, .row:before, .container:after, .row:after {
   content: '';
   display: table;
 }
 
-.container:after {
+.container:after, .row:after {
   clear: both;
 }
 
@@ -80,17 +80,54 @@ main {
 
 @media (min-width: 768px) {
   .container {
-    width: 720px;
+    width: 600px;
   }
 }
 
 @media (min-width: 990px) {
   .container {
-    width: 900px;
+    width: 720px;
   }
 }
 
+.page-header .header {
+  margin-bottom: 0;
+}
+
+.page-header .subheader {
+  color: #9f9f9f;
+  font-size: 13.6px;
+  font-size: 0.85rem;
+  margin-top: 0;
+  text-transform: uppercase;
+}
+
+.page-header hr {
+  margin-left: 0;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  width: 60px;
+}
+
 /* Setup all typography */
+::-moz-selection {
+  color: #333333;
+  background: #ffff79;
+}
+::selection {
+  color: #333333;
+  background: #ffff79;
+}
+
+p {
+  color: #bebebe;
+}
+
+p > a {
+  color: #fff;
+  font-weight: 700;
+}
+
 a {
   text-decoration: none;
 }
@@ -277,7 +314,7 @@ a {
 }
 
 .nav .main-menu h2 {
-  color: #ffff71;
+  color: #ffff79;
   font-weight: 700;
   margin-bottom: 3em;
   position: relative;
@@ -340,7 +377,7 @@ a {
 
 .no-touchevents .nav .main-menu .primary-nav a:hover, .no-touchevents
 .nav .main-menu .contact-info a:hover {
-  color: #ffff71;
+  color: #ffff79;
 }
 
 .nav .main-menu .available {
@@ -393,7 +430,7 @@ a {
 }
 
 .no-touchevents .secondary-navigation a:hover {
-  color: #ffff71;
+  color: #ffff79;
 }
 
 header.site-header {
@@ -422,11 +459,25 @@ header.site-header h1 {
 }
 
 header.site-header a {
-  color: #ffffff;
+  color: #aaa;
 }
 
 header.site-header a:not(:first-child) {
   margin-left: 15px;
+}
+
+header.site-header a i {
+  margin-left: 10px;
+}
+
+header.site-header .social-links {
+  display: none;
+}
+
+@media (min-width: 552px) {
+  header.site-header .social-links {
+    display: inline-block;
+  }
 }
 
 .form .input {
@@ -452,7 +503,7 @@ header.site-header a:not(:first-child) {
   background-color: rgba(255, 255, 255, 0.1);
   border: none;
   border-bottom: 2px solid #ccc;
-  margin-top: 10px;
+  margin-top: 5px;
   padding: 15px;
   width: 100%;
   resize: none;
@@ -477,15 +528,46 @@ header.site-header a:not(:first-child) {
   color: #333333;
   font-weight: 700;
   outline: none;
-  padding: 15px 30px;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
+  padding: 10px 30px;
 }
 
 .no-touchevents .form .submit:hover {
   -webkit-box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
           box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
   cursor: pointer;
+}
+
+.page-process p, .page-process h3 {
+  margin: 0;
+}
+
+.page-process .step {
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page-process .step .desc,
+.page-process .step .icon {
+  width: 50%;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.page-process .step:not(:last-child) {
+  margin-bottom: 90px;
 }
 
 .project {
@@ -862,12 +944,11 @@ header.site-header a:not(:first-child) {
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  vertical-align: middle;
 }
 
 .icon-lg {
   font-size: 1.33333333em;
-  line-height: 0.75em;
-  vertical-align: -15%;
 }
 
 .icon-2x {
@@ -891,21 +972,49 @@ header.site-header a:not(:first-child) {
 }
 
 .icon-instagram:before {
-  content: "\e009";
+  content: "\e001";
 }
 
 .icon-github:before {
-  content: "\e00a";
+  content: "\e002";
 }
 
 .icon-linkedin:before {
-  content: "\e00c";
+  content: "\e003";
 }
 
 .icon-envelope:before {
-  content: "\e00d";
+  content: "\e004";
 }
 
 .icon-check:before {
-  content: "\e00f";
+  content: "\e005";
+}
+
+.icon-discuss:before {
+  content: "\e006";
+}
+
+.icon-design:before {
+  content: "\e007";
+}
+
+.icon-approve:before {
+  content: "\e008";
+}
+
+.icon-coffee:before {
+  content: "\e009";
+}
+
+.icon-develop:before {
+  content: "\e00a";
+}
+
+.icon-test:before {
+  content: "\e00b";
+}
+
+.icon-deploy:before {
+  content: "\e00c";
 }

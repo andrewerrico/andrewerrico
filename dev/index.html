@@ -15,14 +15,10 @@
       <header class="site-header" role="banner">
         <h1><a ng-click="$event.stopPropagation();" href="#">AE</a></h1>
         <div class="secondary-navigation">
-          <nav>
-            <div class="social-links"><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a><a href="#"><i class="fa fa-facebook"></i></a><a ng-click="$menu.hide();$event.stopPropagation();" href="#work">Work</a><a ng-click="$menu.hide();$event.stopPropagation();" href="#contact">Contact</a></div>
-          </nav>
+          <div class="social-links"><a href="http://twitter.com/andrewerrico" target="_blank"><i class="icon-twitter icon-lg"></i></a><a href="http://instagram.com/iamandrewerrico" target="_blank"><i class="icon-instagram icon-lg"></i></a><a href="http://github.com/andrewerrico" target="_blank"><i class="icon-github icon-lg"></i></a></div><a ng-click="$menu.hide();$event.stopPropagation();" href="#work">Work</a><a ng-click="$menu.hide();$event.stopPropagation();" href="#contact">Contact</a>
         </div>
       </header>
-      <article class="container">
-        <div class="{{pageClass}} fade" id="view" ng-view></div>
-      </article>
+      <article class="{{pageClass}} fade" id="view" ng-view></article>
     </main>
     <div ng-include="'/app/partials/menu.html'"></div>
     <script src="assets/js/app.js"></script>

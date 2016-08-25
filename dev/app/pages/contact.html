@@ -1,28 +1,44 @@
 
-<h2>Contact</h2>
-<p></p>
-<div class="form-container" ng-controller="contactFormController">
-  <form class="form" name="contactForm" novalidate="novalidate" role="form">
-    <div class="input">
-      <label>First Name</label>
-      <input type="text" name="name" ng-model="user.firstName" ng-required="true"/>
+<div class="container">
+  <div class="page-header">
+    <h2 class="header">Contact</h2>
+    <p class="subheader">Say HI!</p>
+    <hr/>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-6">
+      <div class="form-container" ng-controller="contactFormController">
+        <form class="form" name="contactForm" novalidate="novalidate" role="form">
+          <div class="input">
+            <label>First Name</label>
+            <input type="text" name="name" ng-model="user.firstName" ng-required="true"/>
+          </div>
+          <div class="input">
+            <label>Last Name</label>
+            <input type="text" name="name" ng-model="user.lastName" ng-required="true"/>
+          </div>
+          <div class="input">
+            <label>Subject</label>
+            <input type="text" name="name" ng-model="user.subject" ng-required="true"/>
+          </div>
+          <div class="input">
+            <label>Email</label>
+            <input type="email" name="email" ng-model="user.email" ng-required="true"/>
+          </div>
+          <div class="input">
+            <label>Message</label>
+            <textarea name="message" ng-model="user.message" ng-required="true"></textarea>
+          </div>
+          <input class="submit" type="submit" value="SEND"/>
+        </form>
+      </div>
     </div>
-    <div class="input">
-      <label>Last Name</label>
-      <input type="text" name="name" ng-model="user.lastName" ng-required="true"/>
+    <div class="col-xs-12 col-sm-6">
+      <p><i class="icon-github icon-2x"></i><span>&nbsp;andrewerrico</span></p>
+      <p><i class="icon-twitter icon-2x"></i><span>&nbsp;andrewerrico</span></p>
+      <p><i class="icon-linkedin icon-2x"></i><span>&nbsp;andrewerrico</span></p>
+      <p><i class="icon-envelope icon-2x"></i><span>&nbsp;hello@andrewerrico.com</span></p>
+      <p>Feel free to contact me about any freelance work.</p>
     </div>
-    <div class="input">
-      <label>Subject</label>
-      <input type="text" name="name" ng-model="user.subject" ng-required="true"/>
-    </div>
-    <div class="input">
-      <label>Email</label>
-      <input type="email" name="email" ng-model="user.email" ng-required="true"/>
-    </div>
-    <div class="input">
-      <label>Message</label>
-      <textarea name="message" ng-model="user.message" ng-required="true"></textarea>
-    </div>
-    <input class="submit" type="submit" value="SEND"/>
-  </form>
+  </div>
 </div>
