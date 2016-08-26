@@ -3,15 +3,18 @@
 // also include ngRoute for all our routing needs
 var myApp = angular.module('myApp', ['ngRoute', 'ngAnimate']);
 
+var currentTime = new Date();
+
 // create the controller and inject Angular's $scope
 myApp.controller('mainController', function($scope) {
     // create a message to display in our view
     $scope.message = 'Everyone come and see how good I look!';
     $scope.pageClass = 'page-home';
+
+    $scope.currentYear = currentTime.getFullYear();
 });
 
 myApp.controller('aboutController', function($scope) {
-    var currentTime = new Date();
     var dob = 1988;
 
     $scope.message = 'Look! I am an about page.';

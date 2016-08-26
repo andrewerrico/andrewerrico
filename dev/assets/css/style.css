@@ -42,6 +42,7 @@ html {
 }
 
 html, body {
+  height: 100%;
   overflow-x: hidden;
 }
 
@@ -54,9 +55,9 @@ main {
   background: #333333;
   position: relative;
   z-index: 2;
-  height: 100vh;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+  min-height: 100%;
   -webkit-transition: -webkit-transform 750ms;
   transition: -webkit-transform 750ms;
   transition: transform 750ms;
@@ -88,6 +89,10 @@ main {
   .container {
     width: 720px;
   }
+}
+
+#view {
+  padding-bottom: 30px;
 }
 
 .page-header .header {
@@ -478,6 +483,25 @@ header.site-header .social-links {
   header.site-header .social-links {
     display: inline-block;
   }
+}
+
+.site-footer {
+  bottom: 0;
+  color: #898989;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  left: 0;
+  padding: 0 30px 15px;
+  position: absolute;
+  right: 0;
+  font-size: 12.8px;
+  font-size: 0.8rem;
 }
 
 .form .input {
