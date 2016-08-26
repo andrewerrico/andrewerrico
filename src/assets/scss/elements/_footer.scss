@@ -1,0 +1,13 @@
+.site-footer {
+  bottom: 0;
+  color: #898989;
+  display: flex;
+  justify-content: space-between;
+  left: 0;
+  padding: 0 30px 15px;
+  position: absolute;
+  right: 0;
+
+  @include font-size(0.8);
+
+}
