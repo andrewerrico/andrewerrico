@@ -33,6 +33,10 @@ html(lang="en", ng-app="myApp")
 
       article#view(ng-view, class="{{pageClass}} fade")
 
+      footer.site-footer
+        .site-love Design + Code
+        .site-copyright &copy; {{currentYear}} Andrew Errico
+
     div(ng-include="'/app/partials/menu.html'")
 
     //-include app/partials/menu
