@@ -7,3 +7,14 @@ $nav-menu-background: #3c3f50;
 $nav-menu-color: #ffffff;
 
 $font-face: 'Titillium';
+
+// Default Breakpoints
+$breakpoints: (
+  'small': (min-width: 540px),
+  'medium': (min-width: 768px),
+  'large': (min-width: 990px)
+);
+
+$sm: 540px;
+$md: 768px;
+$lg: 990px;
