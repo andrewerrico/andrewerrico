@@ -25,7 +25,12 @@
     "import/extensions": [
       ".js",
       ".jsx"
-    ]
+    ],
+    "import/resolver": {
+      "webpack": {
+        "config": "webpack.config.js"
+      }
+    }
   },
   "globals": {
     "Promise": true,
